@@ -1,7 +1,19 @@
-<ul>
-    <li>Uno</li>
-    <li>Dos</li>
-    <li>Tres</li>
-    <li>Cuatro</li>
-    <li>Cinco</li>
-</ul>
+<div class="row">
+    <div
+    *ngFor="let gif of gifs"
+    class="col-md-3 col-sm-6 col-xs-12 mb-3"
+    >
+        <img 
+        [src]="gif.images.downsized_medium.url"
+        [alt]="gif.title"
+        class="card-img-top"
+        >
+        <div class="card mb-2 text-center bg-dark">
+            <div class="card-body text-white">
+                <p class="card-texty">
+                    {{ gif.title }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
